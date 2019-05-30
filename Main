@@ -1,0 +1,29 @@
+import java.util.Arrays;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+
+        Car[] cars = new Car[5];
+
+        cars[0]= new Car("Ferrari 250 GT California Spyder",252,240,"cabriolet",11000000);
+        cars[1]= new Car("ЗАЗ-968 «Запорожец»",118,45,"2-door sedan", 1000);
+        cars[2]= new Car("Buick Skylark Sport Wagon",125,325,"universal",20000);
+        cars[3] = new Car("Fiat Multipla",105,120, "compact van",4000);
+        cars[4] = new Car("Renault Clio IV",150, 225,"hatchback",6900);
+
+        Arrays.sort(cars, new CompareBody());
+
+        for (Car car : cars){
+            System.out.println(car+"\n\n");
+        }
+
+        Arrays.sort(cars, new CompareMaxSpeed().reversed());
+        System.out.println("*****************************************");
+        for (Car car : cars){
+            System.out.println(car+"\n\n");
+        }
+
+    }
+}
