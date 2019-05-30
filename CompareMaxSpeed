@@ -1,0 +1,7 @@
+import java.util.Comparator;
+
+public class CompareMaxSpeed implements Comparator<Car>{
+    public int compare(Car c1, Car c2) {
+        return Integer.compare(c1.getMaxSpeed(),c2.getMaxSpeed());
+    }
+}
