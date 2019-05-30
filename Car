@@ -1,0 +1,36 @@
+public class Car {
+    protected String name;
+    protected int maxSpeed;
+    protected int power;
+    protected String body;
+    protected int price;
+
+    //Constructor
+    public Car(String name, int maxSpeed, int power, String body, int price){
+        this.name = name;
+        this.maxSpeed = maxSpeed;
+        this.power = power;
+        this.body = body;
+        this.price = price;
+    }
+
+    public String getBody(){
+        return body;
+    }
+
+    public int getMaxSpeed(){
+        return maxSpeed;
+    }
+
+
+    @Override
+    public String toString(){
+        return  "|Car:"+"\n"+
+                "the name is " + name + "\n"+
+                "maximum speed is "+ maxSpeed + " km/h" + "\n"+
+                "power is "+ power + " horsepower" +"\n"+
+                "body is "+ body +"\n"+
+                "price is "+price+" $";
+
+    }
+}
